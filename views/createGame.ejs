@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1>
+  <%- include("errors.ejs") %>
+  <form action="/new" method="POST">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username" required>
+    <button type="submit">Submit</button>
+  </form>
+  <a href="/">Back to home</a>
+</body>
+</html>
