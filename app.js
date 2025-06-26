@@ -22,11 +22,11 @@ app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true }));
 
 //serve index router when root is visited
-const indexRouter = require("./routes/indexRouter");
-app.use("/",indexRouter);
+const gameRouter = require("./routes/gameRouter");
+app.use("/",gameRouter);
 
 //starts the server and listens on port 3000
-const PORT = 3000;
+const PORT = 3002;
 app.listen(PORT, () => {
   console.log(`My Express app - listening on port ${PORT}!`);
 });
